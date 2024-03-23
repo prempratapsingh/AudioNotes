@@ -44,11 +44,11 @@ class FirebaseDatabaseService {
             
             userNoteReference.setValue(notesDetails) { error, reference in
                 guard error == nil else {
-                    print("[Firebase Database] Failed to save note details for device \(deviceId)")
+                    print("[Firebase Database] Failed to save note for device \(deviceId)")
                     responseHandler(false)
                     return
                 }
-                print("[Firebase Database] Successfully saved note details for device \(deviceId)")
+                print("[Firebase Database] Successfully saved note for device \(deviceId)")
                 responseHandler(true)
             }
         }
@@ -67,15 +67,17 @@ class FirebaseDatabaseService {
             guard error == nil,
                   let dataSnapshot = snapshot,
                   dataSnapshot.exists(),
-                  let notes = dataSnapshot.value as? [[String: Any]] else {
+                  let notes = dataSnapshot.value as? [String: [String: Any]] else {
                 print("[Firebase Database] Failed to load notes for device \(deviceId)")
                 responseHandler([])
                 return
             }
             
             var userNotes = [NoteModel]()
-            for note in notes {
-                if let id = note[DatabaseNodeCommonProperties.id] as? String, let dateOfCreation = note[NoteNodeProperties.dateOfCreation] as? String, let noteText = note[NoteNodeProperties.text] as? String {
+            for (id, noteDetails) in notes {
+                if  let id = noteDetails[DatabaseNodeCommonProperties.id] as? String,
+                    let dateOfCreation = noteDetails[NoteNodeProperties.dateOfCreation] as? String,
+                    let noteText = noteDetails[NoteNodeProperties.text] as? String {
                     let userNote = NoteModel(id: id, dateOfCreation: Date(), text: noteText)
                     userNotes.append(userNote)
                 }

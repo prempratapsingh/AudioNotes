@@ -29,18 +29,20 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                if !self.viewModel.userNotes.isEmpty {
-                    NotesListView(notes: self.viewModel.userNotes)
-                } else {
-                    EmptyNotesView(delegate: self)
+                if self.viewModel.didAttemptToLoadNotesFromDatabase {
+                    if !self.viewModel.userNotes.isEmpty {
+                        NotesListView(notes: self.viewModel.userNotes)
+                    } else {
+                        EmptyNotesView(delegate: self)
+                    }
                 }
             }
             .navigationBarHidden(true)
             .navigationViewStyle(StackNavigationViewStyle())
             .onAppear {
-                self.overlayContainerContext.shouldShowProgressIndicator = false
-                self.viewModel.getUserNotes { didLoadNotes in
-                    
+                self.overlayContainerContext.shouldShowProgressIndicator = true
+                self.viewModel.getUserNotes { _ in
+                    self.overlayContainerContext.shouldShowProgressIndicator = false
                 }
             }
             .navigationDestination(
