@@ -32,6 +32,8 @@
 		C16EA31A2BAEF017009D1BDA /* OverlayContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16EA3192BAEF017009D1BDA /* OverlayContainerView.swift */; };
 		C16EA31D2BAEF409009D1BDA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C16EA31C2BAEF409009D1BDA /* Localizable.strings */; };
 		C16EA3202BAF52DA009D1BDA /* UIDevice + UUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16EA31F2BAF52DA009D1BDA /* UIDevice + UUID.swift */; };
+		C16EA3222BAF67FC009D1BDA /* NoteWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16EA3212BAF67FC009D1BDA /* NoteWidgetView.swift */; };
+		C16EA3242BAF680B009D1BDA /* NoteDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16EA3232BAF680B009D1BDA /* NoteDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		C16EA3192BAEF017009D1BDA /* OverlayContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayContainerView.swift; sourceTree = "<group>"; };
 		C16EA31C2BAEF409009D1BDA /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		C16EA31F2BAF52DA009D1BDA /* UIDevice + UUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice + UUID.swift"; sourceTree = "<group>"; };
+		C16EA3212BAF67FC009D1BDA /* NoteWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteWidgetView.swift; sourceTree = "<group>"; };
+		C16EA3232BAF680B009D1BDA /* NoteDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,8 @@
 				C16EA3002BAEE863009D1BDA /* EmptyNotesView.swift */,
 				C16EA3042BAEE891009D1BDA /* AddNewNoteView.swift */,
 				C16EA3022BAEE877009D1BDA /* NotesListView.swift */,
+				C16EA3212BAF67FC009D1BDA /* NoteWidgetView.swift */,
+				C16EA3232BAF680B009D1BDA /* NoteDetailsView.swift */,
 				C16EA3062BAEE8A4009D1BDA /* SearchNotesView.swift */,
 			);
 			path = Views;
@@ -288,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C16EA3222BAF67FC009D1BDA /* NoteWidgetView.swift in Sources */,
 				C16EA3112BAEECBE009D1BDA /* TypeAliases.swift in Sources */,
 				C16EA3182BAEEFF6009D1BDA /* ActivityIndicator.swift in Sources */,
 				C16EA30D2BAEE8FF009D1BDA /* SearchNotesViewModel.swift in Sources */,
@@ -302,6 +309,7 @@
 				C16EA3072BAEE8A4009D1BDA /* SearchNotesView.swift in Sources */,
 				C16EA30F2BAEE912009D1BDA /* NoteModel.swift in Sources */,
 				C16EA3202BAF52DA009D1BDA /* UIDevice + UUID.swift in Sources */,
+				C16EA3242BAF680B009D1BDA /* NoteDetailsView.swift in Sources */,
 				C16EA3032BAEE877009D1BDA /* NotesListView.swift in Sources */,
 				C16EA30B2BAEE8D4009D1BDA /* AddNewNoteViewModel.swift in Sources */,
 				C16EA2AB2BAEDBA3009D1BDA /* AudioNotesApp.swift in Sources */,

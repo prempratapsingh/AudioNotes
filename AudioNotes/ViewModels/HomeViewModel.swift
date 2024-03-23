@@ -33,6 +33,8 @@ class HomeViewModel: ObservableObject {
                 responseHandler(false)
                 return
             }
+            
+            self.userNotes.removeAll()
             self.userNotes.append(contentsOf: notes)
             responseHandler(true)
         }

@@ -21,6 +21,8 @@ struct NotesListView: View {
     
     @State private var shouldShowAddNewNoteView = false
     @State private var shouldShowSearchNoteView = false
+    @State private var shouldShowNoteDetailsView = false
+    @State private var selectedNote: NoteModel?
     
     // MARK: - User Interface
     
@@ -86,27 +88,17 @@ struct NotesListView: View {
                     
                     ScrollView {
                         LazyVStack(alignment: .leading, spacing: 16) {
-                            ForEach(self.notes, id: \.id) { note in
-                                ZStack(alignment: .leading) {
-                                    RoundedRectangle(cornerRadius: 8)
-                                        .fill(Color.gray)
-                                        .frame(height: 80)
-                                    
-                                    VStack(alignment: .leading, spacing: 8) {
-                                        Text("\(note.dateOfCreation.description)")
-                                            .font(.system(size: 12))
-                                            .foregroundColor(Color.black)
-                                        
-                                        Text("\(note.text)")
-                                            .font(.system(size: 16))
-                                            .foregroundColor(Color.black)
+                            ForEach(self.notes, id: \.self.id) { note in
+                                NoteWidgetView(note: note)
+                                    .onTapGesture {
+                                        self.selectedNote = note
+                                        self.shouldShowNoteDetailsView = true
                                     }
-                                    .padding(.all, 10)
-                                }
                             }
                         }
+                        .padding(.horizontal, 12)
                     }
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, 6)
                     .padding(.bottom, 24)
                 }
             }
@@ -124,6 +116,13 @@ struct NotesListView: View {
                         .navigationBarHidden(true)
                 }
             )
+            .navigationDestination(
+                isPresented: self.$shouldShowNoteDetailsView,
+                destination: {
+                    NoteDetailsView(note: self.selectedNote)
+                        .navigationBarHidden(true)
+                }
+            )
         }
     }
 }
@@ -134,6 +133,5 @@ struct NotesListView: View {
 extension NotesListView: AddNewNoteViewDelegate {
     func didSaveNewNote(_ note: NoteModel) {
         self.shouldShowAddNewNoteView = false
-        
     }
 }
