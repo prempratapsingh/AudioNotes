@@ -3,4 +3,102 @@
    uuid = "3B52BDF0-80A2-4F53-9FCC-2FB38DB4FBCC"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4C215E0A-2CF4-4C2F-A9E6-CBC891BD7675"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AudioNotes/Views/HomeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "didSaveNewNote()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4C215E0A-2CF4-4C2F-A9E6-CBC891BD7675 - d98162e698fafdfb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AudioNotes.HomeView.didSaveNewNote() -&gt; ()"
+                  moduleName = "AudioNotes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prempratapsingh/Documents/Learning/iOS%20Development/POCs/AudioNotes/AudioNotes/Views/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "216">
+               </Location>
+               <Location
+                  uuid = "4C215E0A-2CF4-4C2F-A9E6-CBC891BD7675 - 763f0c969415dd6c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;AudioNotes.NoteModel&gt;) -&gt; () in AudioNotes.HomeView.didSaveNewNote() -&gt; ()"
+                  moduleName = "AudioNotes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prempratapsingh/Documents/Learning/iOS%20Development/POCs/AudioNotes/AudioNotes/Views/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B4A0367C-DD8E-4F63-9570-228112BC8737"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AudioNotes/ViewModels/AddNewNoteViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "saveNoteToDatabase(responseHandlder:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FC643141-67E7-42A5-B87F-D2F5A6C0CC29"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AudioNotes/Views/HomeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "didSaveNewNote()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D7FACAF9-3C8A-410A-BAC3-64ECB0B7F978"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AudioNotes/Views/HomeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "didSaveNewNote()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
