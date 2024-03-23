@@ -22,8 +22,6 @@ struct HomeView: View {
     @StateObject private var viewModel = HomeViewModel()
     @State private var shouldShowAddNewNoteView = false
     
-    private let addNewNoteViewModel = AddNewNoteViewModel()
-    
     // MARK: User interface
     
     var body: some View {
@@ -40,6 +38,7 @@ struct HomeView: View {
             .navigationBarHidden(true)
             .navigationViewStyle(StackNavigationViewStyle())
             .onAppear {
+                guard self.viewModel.userNotes.isEmpty else { return }
                 self.overlayContainerContext.shouldShowProgressIndicator = true
                 self.viewModel.getUserNotes { _ in
                     self.overlayContainerContext.shouldShowProgressIndicator = false

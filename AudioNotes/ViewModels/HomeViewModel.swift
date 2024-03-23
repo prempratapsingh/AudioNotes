@@ -18,7 +18,6 @@ class HomeViewModel: ObservableObject {
     @Published var userNotes = [NoteModel]()
     @Published var didAttemptToLoadNotesFromDatabase = false
     
-    
     // MARK: - Public Methods
     
     /**

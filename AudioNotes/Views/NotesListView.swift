@@ -15,7 +15,7 @@ struct NotesListView: View {
     
     // MARK: - Public Properties
     
-    var notes: [NoteModel]
+    @State var notes: [NoteModel]
     
     // MARK: - Private Properties
     
@@ -133,5 +133,6 @@ struct NotesListView: View {
 extension NotesListView: AddNewNoteViewDelegate {
     func didSaveNewNote(_ note: NoteModel) {
         self.shouldShowAddNewNoteView = false
+        self.notes.append(note)
     }
 }
