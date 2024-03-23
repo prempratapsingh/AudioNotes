@@ -48,13 +48,12 @@ struct SearchNotesView: View {
                     Spacer()
                 }
                 .padding(.horizontal, 12)
-                .padding(.bottom, 100)
-                
-                Text(NSLocalizedString("Search Notes", comment: "Search notes view - title"))
-                    .font(.system(size: 18))
-                    .foregroundColor(Color.black)
-                    .padding(.horizontal, 24)
-                
+                .overlay(content: {
+                    Text(NSLocalizedString("Search Notes", comment: "Search notes view - title"))
+                        .font(.system(size: 18))
+                        .foregroundColor(Color.black)
+                        .padding(.horizontal, 24)
+                })
                 Spacer()
             }
         }
