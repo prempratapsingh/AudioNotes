@@ -15,7 +15,7 @@ class HomeViewModel: ObservableObject {
     
     // MARK: - Public Properties
     
-    @Published var userNotes: [NoteModel]?
+    @Published var userNotes = [NoteModel]()
     
     
     // MARK: - Public Methods

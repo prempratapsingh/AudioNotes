@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  AudioNotes
+
+  Created by Prem Pratap Singh on 23/03/24.
+  
+*/
+
+//----- Empty Notes View -----//
+"Audio notes app simplifies the workflow for taking notes and working with them later.\n\nTap on the take new note button to start." = "Audio notes app simplifies the workflow for taking notes and working with them later.\n\nTap on the take new note button to start.";
+"Add a note" = "Add a note";
+
+
+//----- Notes List View -----//
+"My Notes" = "My Notes";
+
+//----- Add Note View -----//
+
+"Add New Note" = "Add New Note";
+"Tap on the mic icon or long press the volume up key to record a new audio note.\n\nWhile audio recording is in progress, tap on the mic button again or long press volume down button to stop the recording.\n\nTo save the note, tap on the save button." = "Tap on the mic icon or long press the volume up key to record a new audio note.\n\nWhile audio recording is in progress, tap on the mic button again or long press volume down button to stop the recording.\n\nTo save the note, tap on the save button.";
+
+//----- Search Note View -----//
+"Search Notes" = "Search Notes";
+
