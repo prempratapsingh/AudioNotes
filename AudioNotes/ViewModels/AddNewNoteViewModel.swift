@@ -12,7 +12,11 @@ import Foundation
  1. Convert user recorded audio to text
  2. Saving notes text to Firebase database
  */
-class AddNewNoteViewModel {
+class AddNewNoteViewModel: ObservableObject {
+    
+    // MARK: - Private Properties
+    
+    let databaseService = FirebaseDatabaseService()
     
     // MARK: - Public Methods
     
@@ -21,8 +25,14 @@ class AddNewNoteViewModel {
     }
     
     func saveNoteToDatabase(responseHandlder: @escaping ResponseHandler<NoteModel?>) {
-        let note = NoteModel()
-        note.text = "Its a new note"
-        responseHandlder(note)
+        let note = NoteModel(id: UUID().uuidString, dateOfCreation: Date(), text: "Its a new note")
+        self.databaseService.saveNoteToDatabase(note) { didSave in
+            guard didSave else {
+                responseHandlder(nil)
+                return
+            }
+            
+            responseHandlder(note)
+        }
     }
 }

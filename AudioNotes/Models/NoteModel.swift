@@ -12,7 +12,13 @@ import Foundation
  This object has all the notes related details like id, creation date, note text, etc.
  */
 class NoteModel {
-    let id: String = UUID().uuidString
-    let dateOfCreation: Date = Date()
-    var text: String = ""
+    let id: String
+    let dateOfCreation: Date
+    var text: String
+    
+    init(id: String, dateOfCreation: Date, text: String) {
+        self.id = id
+        self.dateOfCreation = dateOfCreation
+        self.text = text
+    }
 }

@@ -132,7 +132,7 @@ struct NotesListView: View {
 // MARK: - AddNewNoteViewDelegate delegate methods
 
 extension NotesListView: AddNewNoteViewDelegate {
-    func didSaveNewNote() {
+    func didSaveNewNote(_ note: NoteModel) {
         self.shouldShowAddNewNoteView = false
         
     }

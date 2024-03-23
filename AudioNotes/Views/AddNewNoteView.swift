@@ -11,7 +11,7 @@ import SwiftUI
  AddNewNoteViewDelegate manages the workflow after user saves a new note
  */
 protocol AddNewNoteViewDelegate {
-    func didSaveNewNote()
+    func didSaveNewNote(_ note: NoteModel)
 }
 
 /**
@@ -28,7 +28,9 @@ struct AddNewNoteView: View {
     
     // MARK: Private properties
     
+    @EnvironmentObject private var overlayContainerContext: OverlayContainerContext
     @SwiftUI.Environment(\.presentationMode) private var presentationMode
+    @StateObject private var viewModel = AddNewNoteViewModel()
     
     // MARK: User interface
     
@@ -83,7 +85,12 @@ struct AddNewNoteView: View {
                 
                 Button(
                     action: {
-                        self.delegate?.didSaveNewNote()
+                        self.overlayContainerContext.shouldShowProgressIndicator = true
+                        self.viewModel.saveNoteToDatabase { note in
+                            self.overlayContainerContext.shouldShowProgressIndicator = false
+                            guard let userNote = note else { return }
+                            self.delegate?.didSaveNewNote(userNote)
+                        }
                     },
                     label: {
                         ZStack {

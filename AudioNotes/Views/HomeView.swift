@@ -22,7 +22,7 @@ struct HomeView: View {
     @StateObject private var viewModel = HomeViewModel()
     @State private var shouldShowAddNewNoteView = false
     
-    private var addNewNoteViewModel = AddNewNoteViewModel()
+    private let addNewNoteViewModel = AddNewNoteViewModel()
     
     // MARK: User interface
     
@@ -67,17 +67,8 @@ extension HomeView: EmptyNotesViewDelegate {
 // MARK: - AddNewNoteViewDelegate delegate methods
 
 extension HomeView: AddNewNoteViewDelegate {
-    func didSaveNewNote() {
+    func didSaveNewNote(_ note: NoteModel) {
         self.shouldShowAddNewNoteView = false
-        
-        self.overlayContainerContext.shouldShowProgressIndicator = true
-        self.addNewNoteViewModel.saveNoteToDatabase { note in
-            self.overlayContainerContext.shouldShowProgressIndicator = false
-            guard let savedNote = note else {
-                return
-            }
-            
-            self.viewModel.userNotes.append(savedNote)
-        }
+        self.viewModel.userNotes.append(note)
     }
 }

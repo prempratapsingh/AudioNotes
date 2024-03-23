@@ -31,6 +31,7 @@
 		C16EA3182BAEEFF6009D1BDA /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16EA3172BAEEFF6009D1BDA /* ActivityIndicator.swift */; };
 		C16EA31A2BAEF017009D1BDA /* OverlayContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16EA3192BAEF017009D1BDA /* OverlayContainerView.swift */; };
 		C16EA31D2BAEF409009D1BDA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C16EA31C2BAEF409009D1BDA /* Localizable.strings */; };
+		C16EA3202BAF52DA009D1BDA /* UIDevice + UUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16EA31F2BAF52DA009D1BDA /* UIDevice + UUID.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		C16EA3172BAEEFF6009D1BDA /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		C16EA3192BAEF017009D1BDA /* OverlayContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayContainerView.swift; sourceTree = "<group>"; };
 		C16EA31C2BAEF409009D1BDA /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		C16EA31F2BAF52DA009D1BDA /* UIDevice + UUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice + UUID.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		C16EA2A92BAEDBA3009D1BDA /* AudioNotes */ = {
 			isa = PBXGroup;
 			children = (
+				C16EA31E2BAF52C8009D1BDA /* Extension */,
 				C16EA2C42BAEE44E009D1BDA /* Firebase */,
 				C16EA2B82BAEDBB9009D1BDA /* Application */,
 				C16EA2B92BAEDBC4009D1BDA /* Views */,
@@ -196,6 +199,14 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
+		C16EA31E2BAF52C8009D1BDA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C16EA31F2BAF52DA009D1BDA /* UIDevice + UUID.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -290,6 +301,7 @@
 				C16EA3012BAEE863009D1BDA /* EmptyNotesView.swift in Sources */,
 				C16EA3072BAEE8A4009D1BDA /* SearchNotesView.swift in Sources */,
 				C16EA30F2BAEE912009D1BDA /* NoteModel.swift in Sources */,
+				C16EA3202BAF52DA009D1BDA /* UIDevice + UUID.swift in Sources */,
 				C16EA3032BAEE877009D1BDA /* NotesListView.swift in Sources */,
 				C16EA30B2BAEE8D4009D1BDA /* AddNewNoteViewModel.swift in Sources */,
 				C16EA2AB2BAEDBA3009D1BDA /* AudioNotesApp.swift in Sources */,

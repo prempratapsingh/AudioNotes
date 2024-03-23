@@ -7,47 +7,62 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4C215E0A-2CF4-4C2F-A9E6-CBC891BD7675"
-            shouldBeEnabled = "No"
+            uuid = "35A67D02-4648-4A28-B73A-F7BC5990259E"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AudioNotes/Views/HomeView.swift"
+            filePath = "AudioNotes/Services/FirebaseDatabaseService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "didSaveNewNote()"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "saveNoteToDatabase(_:responseHandler:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "4C215E0A-2CF4-4C2F-A9E6-CBC891BD7675 - d98162e698fafdfb"
+                  uuid = "35A67D02-4648-4A28-B73A-F7BC5990259E - 8fad911aa839a1e7"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "AudioNotes.HomeView.didSaveNewNote() -&gt; ()"
+                  symbolName = "AudioNotes.NoteNodeProperties.init() -&gt; AudioNotes.NoteNodeProperties"
                   moduleName = "AudioNotes"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/prempratapsingh/Documents/Learning/iOS%20Development/POCs/AudioNotes/AudioNotes/Views/HomeView.swift"
+                  urlString = "file:///Users/prempratapsingh/Documents/Learning/iOS%20Development/POCs/AudioNotes/AudioNotes/Services/FirebaseDatabaseService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "74"
-                  endingLineNumber = "74"
-                  offsetFromSymbolStart = "216">
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "0">
                </Location>
                <Location
-                  uuid = "4C215E0A-2CF4-4C2F-A9E6-CBC891BD7675 - 763f0c969415dd6c"
+                  uuid = "35A67D02-4648-4A28-B73A-F7BC5990259E - b10dc6eff60f4832"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;AudioNotes.NoteModel&gt;) -&gt; () in AudioNotes.HomeView.didSaveNewNote() -&gt; ()"
+                  symbolName = "AudioNotes.FirebaseDatabaseService.saveNoteToDatabase(_: AudioNotes.NoteModel, responseHandler: (Swift.Bool) -&gt; ()) -&gt; ()"
                   moduleName = "AudioNotes"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/prempratapsingh/Documents/Learning/iOS%20Development/POCs/AudioNotes/AudioNotes/Views/HomeView.swift"
+                  urlString = "file:///Users/prempratapsingh/Documents/Learning/iOS%20Development/POCs/AudioNotes/AudioNotes/Services/FirebaseDatabaseService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "75"
-                  endingLineNumber = "75"
-                  offsetFromSymbolStart = "48">
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "1748">
+               </Location>
+               <Location
+                  uuid = "35A67D02-4648-4A28-B73A-F7BC5990259E - b10dc6eff60f4832"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AudioNotes.FirebaseDatabaseService.saveNoteToDatabase(_: AudioNotes.NoteModel, responseHandler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "AudioNotes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prempratapsingh/Documents/Learning/iOS%20Development/POCs/AudioNotes/AudioNotes/Services/FirebaseDatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "1912">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -55,15 +70,237 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B4A0367C-DD8E-4F63-9570-228112BC8737"
-            shouldBeEnabled = "No"
+            uuid = "18D9E94E-1CDF-4ABC-B9C9-EA1D59284DDA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AudioNotes/Services/FirebaseDatabaseService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "saveNoteToDatabase(_:responseHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "18D9E94E-1CDF-4ABC-B9C9-EA1D59284DDA - b10dc6eff60f4985"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AudioNotes.FirebaseDatabaseService.saveNoteToDatabase(_: AudioNotes.NoteModel, responseHandler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "AudioNotes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prempratapsingh/Documents/Learning/iOS%20Development/POCs/AudioNotes/AudioNotes/Services/FirebaseDatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "1556">
+               </Location>
+               <Location
+                  uuid = "18D9E94E-1CDF-4ABC-B9C9-EA1D59284DDA - e0bd1674cc1dc98e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;, __C.FIRDatabaseReference) -&gt; () in AudioNotes.FirebaseDatabaseService.saveNoteToDatabase(_: AudioNotes.NoteModel, responseHandler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "AudioNotes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prempratapsingh/Documents/Learning/iOS%20Development/POCs/AudioNotes/AudioNotes/Services/FirebaseDatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "18D9E94E-1CDF-4ABC-B9C9-EA1D59284DDA - b10dc6eff60f49e4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AudioNotes.FirebaseDatabaseService.saveNoteToDatabase(_: AudioNotes.NoteModel, responseHandler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "AudioNotes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prempratapsingh/Documents/Learning/iOS%20Development/POCs/AudioNotes/AudioNotes/Services/FirebaseDatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "1544">
+               </Location>
+               <Location
+                  uuid = "18D9E94E-1CDF-4ABC-B9C9-EA1D59284DDA - e0bd1674cc1dc9a9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;, __C.FIRDatabaseReference) -&gt; () in AudioNotes.FirebaseDatabaseService.saveNoteToDatabase(_: AudioNotes.NoteModel, responseHandler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "AudioNotes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prempratapsingh/Documents/Learning/iOS%20Development/POCs/AudioNotes/AudioNotes/Services/FirebaseDatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "116">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2F0C4C6B-9368-4351-BDF5-5CB193B060AD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AudioNotes/Services/FirebaseDatabaseService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "saveNoteToDatabase(_:responseHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2F0C4C6B-9368-4351-BDF5-5CB193B060AD - e0bd1674cc1dca48"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;, __C.FIRDatabaseReference) -&gt; () in AudioNotes.FirebaseDatabaseService.saveNoteToDatabase(_: AudioNotes.NoteModel, responseHandler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "AudioNotes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prempratapsingh/Documents/Learning/iOS%20Development/POCs/AudioNotes/AudioNotes/Services/FirebaseDatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "956">
+               </Location>
+               <Location
+                  uuid = "2F0C4C6B-9368-4351-BDF5-5CB193B060AD - e0bd1674cc1dca6b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;, __C.FIRDatabaseReference) -&gt; () in AudioNotes.FirebaseDatabaseService.saveNoteToDatabase(_: AudioNotes.NoteModel, responseHandler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "AudioNotes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prempratapsingh/Documents/Learning/iOS%20Development/POCs/AudioNotes/AudioNotes/Services/FirebaseDatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "956">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B93F3717-CA5F-465B-B624-53212971660D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AudioNotes/Services/FirebaseDatabaseService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "saveNoteToDatabase(_:responseHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B93F3717-CA5F-465B-B624-53212971660D - e0bd1674cc1dcac4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;, __C.FIRDatabaseReference) -&gt; () in AudioNotes.FirebaseDatabaseService.saveNoteToDatabase(_: AudioNotes.NoteModel, responseHandler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "AudioNotes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prempratapsingh/Documents/Learning/iOS%20Development/POCs/AudioNotes/AudioNotes/Services/FirebaseDatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "556">
+               </Location>
+               <Location
+                  uuid = "B93F3717-CA5F-465B-B624-53212971660D - e0bd1674cc1dcae7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;, __C.FIRDatabaseReference) -&gt; () in AudioNotes.FirebaseDatabaseService.saveNoteToDatabase(_: AudioNotes.NoteModel, responseHandler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "AudioNotes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prempratapsingh/Documents/Learning/iOS%20Development/POCs/AudioNotes/AudioNotes/Services/FirebaseDatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "556">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ED4DFDA7-884A-47AE-9E4B-1B4076F13845"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AudioNotes/ViewModels/AddNewNoteViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "saveNoteToDatabase(responseHandlder:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "ED4DFDA7-884A-47AE-9E4B-1B4076F13845 - b3bdf79f3ceea11e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AudioNotes.AddNewNoteViewModel.saveNoteToDatabase(responseHandlder: (Swift.Optional&lt;AudioNotes.NoteModel&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "AudioNotes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prempratapsingh/Documents/Learning/iOS%20Development/POCs/AudioNotes/AudioNotes/ViewModels/AddNewNoteViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "384">
+               </Location>
+               <Location
+                  uuid = "ED4DFDA7-884A-47AE-9E4B-1B4076F13845 - 8949dc42d79e1e16"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in AudioNotes.AddNewNoteViewModel.saveNoteToDatabase(responseHandlder: (Swift.Optional&lt;AudioNotes.NoteModel&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "AudioNotes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prempratapsingh/Documents/Learning/iOS%20Development/POCs/AudioNotes/AudioNotes/ViewModels/AddNewNoteViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "47C9A7B2-4E93-4142-80BB-5678ECE1AC0F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AudioNotes/ViewModels/AddNewNoteViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "saveNoteToDatabase(responseHandlder:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -71,32 +308,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FC643141-67E7-42A5-B87F-D2F5A6C0CC29"
-            shouldBeEnabled = "No"
+            uuid = "9D00035F-E573-42A7-88ED-DB8B614483E8"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AudioNotes/Views/HomeView.swift"
+            filePath = "AudioNotes/ViewModels/AddNewNoteViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "didSaveNewNote()"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "saveNoteToDatabase(responseHandlder:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D7FACAF9-3C8A-410A-BAC3-64ECB0B7F978"
-            shouldBeEnabled = "No"
+            uuid = "27A0A557-48EE-47DF-905E-589854C72CAC"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AudioNotes/Views/HomeView.swift"
+            filePath = "AudioNotes/ViewModels/AddNewNoteViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "didSaveNewNote()"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "saveNoteToDatabase(responseHandlder:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
