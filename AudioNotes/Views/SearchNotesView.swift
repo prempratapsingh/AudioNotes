@@ -17,7 +17,7 @@ struct SearchNotesView: View {
     
     var notes: [NoteModel]
     
-    // MARK: - Private properties
+    // MARK: - Private Properties
     
     @SwiftUI.Environment(\.presentationMode) private var presentationMode
     @StateObject private var viewModel = SearchNotesViewModel()
@@ -32,7 +32,7 @@ struct SearchNotesView: View {
     // MARK: - User Interface
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             ZStack {
                 // Main Content
                 VStack(alignment: .center, spacing: 12) {
@@ -91,6 +91,16 @@ struct SearchNotesView: View {
                     
                     Spacer()
                 }
+                
+                // Link to entry item details view
+                NavigationLink(
+                    destination:
+                        NoteDetailsView(note: self.selectedNote)
+                        .navigationBarHidden(true)
+                    ,
+                    isActive: self.$shouldShowNoteDetailsView
+                ) { EmptyView() }
+
             }
             .onAppear {
                 self.viewModel.allNotes = self.notes
@@ -106,14 +116,6 @@ struct SearchNotesView: View {
                     self.viewModel.searchNotes(with: self.searchString)
                 }
             }
-            .navigationBarHidden(true)
-            .navigationDestination(
-                isPresented: self.$shouldShowNoteDetailsView,
-                destination: {
-                    NoteDetailsView(note: self.selectedNote)
-                        .navigationBarHidden(true)
-                }
-            )
         }
     }
     

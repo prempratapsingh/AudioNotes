@@ -27,7 +27,7 @@ struct NotesListView: View {
     // MARK: - User Interface
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             ZStack {
                 
                 // Main Content
@@ -100,29 +100,35 @@ struct NotesListView: View {
                     }
                     .padding(.horizontal, 6)
                     .padding(.bottom, 24)
+                    
+                    // Link to add new note view
+                    NavigationLink(
+                        destination:
+                            AddNewNoteView(delegate: self)
+                                .navigationBarHidden(true)
+                        ,
+                        isActive: self.$shouldShowAddNewNoteView
+                    ) { EmptyView() }
+                    
+                    // Link to note details view
+                    NavigationLink(
+                        destination:
+                            NoteDetailsView(note: self.selectedNote)
+                                .navigationBarHidden(true)
+                        ,
+                        isActive: self.$shouldShowNoteDetailsView
+                    ) { EmptyView() }
+                    
+                    // Link to search note view
+                    NavigationLink(
+                        destination:
+                            SearchNotesView(notes: self.notes)
+                                .navigationBarHidden(true)
+                        ,
+                        isActive: self.$shouldShowSearchNoteView
+                    ) { EmptyView() }
                 }
             }
-            .navigationDestination(
-                isPresented: self.$shouldShowAddNewNoteView,
-                destination: {
-                    AddNewNoteView(delegate: self)
-                        .navigationBarHidden(true)
-                }
-            )
-            .navigationDestination(
-                isPresented: self.$shouldShowSearchNoteView,
-                destination: {
-                    SearchNotesView(notes: self.notes)
-                        .navigationBarHidden(true)
-                }
-            )
-            .navigationDestination(
-                isPresented: self.$shouldShowNoteDetailsView,
-                destination: {
-                    NoteDetailsView(note: self.selectedNote)
-                        .navigationBarHidden(true)
-                }
-            )
         }
     }
 }

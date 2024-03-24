@@ -26,7 +26,7 @@ struct AddNewNoteView: View {
     
     var delegate: AddNewNoteViewDelegate?
     
-    // MARK: Private properties
+    // MARK: Private Properties
     
     @EnvironmentObject private var overlayContainerContext: OverlayContainerContext
     @SwiftUI.Environment(\.presentationMode) private var presentationMode
@@ -35,7 +35,7 @@ struct AddNewNoteView: View {
     @State private var scaleUpDownTimer: Timer? = nil
     @State private var shouldScaleUpRecordingButton: Bool = false
     
-    // MARK: User interface
+    // MARK: User Interface
     
     var body: some View {
         ZStack {
@@ -135,9 +135,9 @@ struct AddNewNoteView: View {
                             // Save note button
                             Button(
                                 action: {
-                                    //self.overlayContainerContext.shouldShowProgressIndicator = true
+                                    self.overlayContainerContext.shouldShowProgressIndicator = true
                                     self.viewModel.saveNoteToDatabase { note in
-                                        //self.overlayContainerContext.shouldShowProgressIndicator = false
+                                        self.overlayContainerContext.shouldShowProgressIndicator = false
                                         guard let userNote = note else { return }
                                         self.delegate?.didSaveNewNote(userNote)
                                     }
@@ -168,9 +168,9 @@ struct AddNewNoteView: View {
                             // Convert audio to text button
                             Button(
                                 action: {
-                                    //self.overlayContainerContext.shouldShowProgressIndicator = true
+                                    self.overlayContainerContext.shouldShowProgressIndicator = true
                                     self.viewModel.convertAudioToText { _ in
-                                        //self.overlayContainerContext.shouldShowProgressIndicator = false
+                                        self.overlayContainerContext.shouldShowProgressIndicator = false
                                     }
                                 },
                                 label: {

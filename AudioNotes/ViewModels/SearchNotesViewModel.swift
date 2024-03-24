@@ -27,7 +27,7 @@ class SearchNotesViewModel: ObservableObject {
      */
     func searchNotes(with searchText: String) {
         guard !searchText.isEmpty else {
-            self.searchResults.removeAll()
+            self.clearSearchResults()
             return
         }
         for note in self.allNotes {

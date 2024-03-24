@@ -16,16 +16,16 @@ import SwiftUI
  */
 struct HomeView: View {
     
-    // MARK: - Private properties
+    // MARK: - Private Properties
     
     @EnvironmentObject private var overlayContainerContext: OverlayContainerContext
     @StateObject private var viewModel = HomeViewModel()
     @State private var shouldShowAddNewNoteView = false
     
-    // MARK: User interface
+    // MARK: User Interface
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             ZStack {
                 if self.viewModel.didAttemptToLoadNotesFromDatabase {
                     if !self.viewModel.userNotes.isEmpty {
@@ -34,8 +34,16 @@ struct HomeView: View {
                         EmptyNotesView(delegate: self)
                     }
                 }
+                
+                // Link to add new note view
+                NavigationLink(
+                    destination:
+                        AddNewNoteView(delegate: self)
+                            .navigationBarHidden(true)
+                    ,
+                    isActive: self.$shouldShowAddNewNoteView
+                ) { EmptyView() }
             }
-            .navigationBarHidden(true)
             .navigationViewStyle(StackNavigationViewStyle())
             .onAppear {
                 guard self.viewModel.userNotes.isEmpty else { return }
@@ -44,13 +52,6 @@ struct HomeView: View {
                     self.overlayContainerContext.shouldShowProgressIndicator = false
                 }
             }
-            .navigationDestination(
-                isPresented: self.$shouldShowAddNewNoteView,
-                destination: {
-                    AddNewNoteView(delegate: self)
-                        .navigationBarHidden(true)
-                }
-            )
         }
         .navigationBarHidden(true)
         .ignoresSafeArea()
