@@ -17,7 +17,11 @@
 //----- Add Note View -----//
 
 "Add New Note" = "Add New Note";
-"Tap on the mic icon or long press the volume up key to record a new audio note.\n\nWhile audio recording is in progress, tap on the mic button again or long press volume down button to stop the recording.\n\nTo save the note, tap on the save button." = "Tap on the mic icon or long press the volume up key to record a new audio note.\n\nWhile audio recording is in progress, tap on the mic button again or long press volume down button to stop the recording.\n\nTo save the note, tap on the save button.";
+"Tap on the mic button to record a new audio note.\n\nWhile audio recording is in progress, tap on the mic button again to stop the recording.\n\nAfter your audio note is ready, tap on the convert to text button and than save button to save your note." = "Tap on the mic button to record a new audio note.\n\nWhile audio recording is in progress, tap on the mic button again to stop the recording.\n\nAfter your audio note is ready, tap on the convert to text button and than save button to save your note.";
+"Awesome! your audio note is ready, tap on the button below to convert your audio note to text." = "Awesome! your audio note is ready, tap on the button below to convert your audio note to text.";
+"Convert audio note to text" = "Convert audio note to text";
+"Great, here is your text note," = "Great, here is your text note,";
+"Save note" = "Save note";
 
 //----- Search Note View -----//
 "Search Notes" = "Search Notes";

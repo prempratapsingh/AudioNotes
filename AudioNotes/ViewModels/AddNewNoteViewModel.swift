@@ -14,13 +14,67 @@ import Speech
  1. Convert user recorded audio to text
  2. Saving notes text to Firebase database
  */
-class AddNewNoteViewModel: ObservableObject {
+class AddNewNoteViewModel: NSObject, ObservableObject, AVAudioRecorderDelegate {
+    
+    // MARK: - Public Properties
+    
+    @Published var isRecoringInProgress = false
+    @Published var didRecordAudio = false
+    @Published var noteText: String?
     
     // MARK: - Private Properties
     
     let databaseService = FirebaseDatabaseService()
     
+    private var audioFileUrl: URL?
+    private let audioFileExtension = "m4a"
+    private var audioRecorder: AVAudioRecorder?
+    
     // MARK: - Public Methods
+    
+    func startAudioRecording() {
+        guard !self.isRecoringInProgress else { return }
+        
+        let audioSession = AVAudioSession.sharedInstance()
+        do {
+            try audioSession.setCategory(.playAndRecord, mode: .default, options: .defaultToSpeaker)
+            try audioSession.setActive(true)
+
+            let settings: [String: Any] = [
+                AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
+                AVSampleRateKey: 44100.0,
+                AVNumberOfChannelsKey: 2,
+                AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
+            ]
+
+            guard let documentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+                self.isRecoringInProgress = false
+                self.didRecordAudio = false
+                return
+            }
+
+            let recordingFileName = UUID().uuidString.appending(".\(self.audioFileExtension)")
+            self.audioFileUrl = documentsPath.appendingPathComponent(recordingFileName)
+            self.audioRecorder = try AVAudioRecorder(url: self.audioFileUrl!, settings: settings)
+            self.audioRecorder?.delegate = self
+            self.audioRecorder?.record()
+            
+            self.isRecoringInProgress = true
+            self.didRecordAudio = false
+        } catch {
+            print("[AudioService] Error starting audio recording")
+            self.isRecoringInProgress = false
+            self.didRecordAudio = false
+        }
+    }
+    
+    func stopAudioRecording() {
+        guard self.isRecoringInProgress else { return }
+        
+        self.audioRecorder?.stop()
+        self.isRecoringInProgress = false
+        self.didRecordAudio = true
+    }
     
     /**
      It uses iOS `SFSpeechRecognizer` API for converting given audio to text.
@@ -28,12 +82,7 @@ class AddNewNoteViewModel: ObservableObject {
      */
     func convertAudioToText(responseHandler: @escaping ResponseHandler<String?>) {
         self.requestTranscribePermissions { hasPermission in
-            guard hasPermission else {
-                responseHandler(nil)
-                return
-            }
-            
-            guard let audioURL = Bundle.main.url(forResource: "harvard", withExtension: "wav") else {
+            guard hasPermission, let audioURL = self.audioFileUrl else {
                 responseHandler(nil)
                 return
             }
@@ -49,6 +98,7 @@ class AddNewNoteViewModel: ObservableObject {
 
                 if result.isFinal {
                     let text = result.bestTranscription.formattedString
+                    self.noteText = text
                     responseHandler(text)
                 }
             }
@@ -60,7 +110,12 @@ class AddNewNoteViewModel: ObservableObject {
      It also returns the database operation sucess/failure state with the responseHandlder callback
      */
     func saveNoteToDatabase(responseHandler: @escaping ResponseHandler<NoteModel?>) {
-        let note = NoteModel(id: UUID().uuidString, dateOfCreation: Date(), text: "Its a new note")
+        guard let noteText = self.noteText else {
+            responseHandler(nil)
+            return
+        }
+        
+        let note = NoteModel(id: UUID().uuidString, dateOfCreation: Date(), text: noteText)
         self.databaseService.saveNoteToDatabase(note) { didSave in
             guard didSave else {
                 responseHandler(nil)
@@ -69,6 +124,13 @@ class AddNewNoteViewModel: ObservableObject {
             
             responseHandler(note)
         }
+    }
+    
+    /**
+     it resets the state to default
+     */
+    func resetToDefaultState() {
+        self.audioFileUrl = nil
     }
     
     // MARK: - Private Methods
