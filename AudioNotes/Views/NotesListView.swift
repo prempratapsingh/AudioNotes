@@ -87,7 +87,7 @@ struct NotesListView: View {
                     // Notes list
                     
                     ScrollView {
-                        LazyVStack(alignment: .leading, spacing: 16) {
+                        LazyVStack(alignment: .leading, spacing: 10) {
                             ForEach(self.notes, id: \.self.id) { note in
                                 NoteWidgetView(note: note)
                                     .onTapGesture {
@@ -112,7 +112,7 @@ struct NotesListView: View {
             .navigationDestination(
                 isPresented: self.$shouldShowSearchNoteView,
                 destination: {
-                    SearchNotesView()
+                    SearchNotesView(notes: self.notes)
                         .navigationBarHidden(true)
                 }
             )
@@ -134,5 +134,6 @@ extension NotesListView: AddNewNoteViewDelegate {
     func didSaveNewNote(_ note: NoteModel) {
         self.shouldShowAddNewNoteView = false
         self.notes.append(note)
+        self.notes.sort(by: { $0.dateOfCreation.timeIntervalSince1970 > $1.dateOfCreation.timeIntervalSince1970 })
     }
 }

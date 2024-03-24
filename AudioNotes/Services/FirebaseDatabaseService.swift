@@ -38,7 +38,7 @@ class FirebaseDatabaseService {
             
             let notesDetails: [String: Any] = [
                 DatabaseNodeCommonProperties.id: note.id,
-                NoteNodeProperties.dateOfCreation: note.dateOfCreation.description,
+                NoteNodeProperties.dateOfCreation: note.dateOfCreation.formattedDateAndTimeString,
                 NoteNodeProperties.text: note.text
             ]
             
@@ -74,11 +74,12 @@ class FirebaseDatabaseService {
             }
             
             var userNotes = [NoteModel]()
-            for (id, noteDetails) in notes {
+            for (_, noteDetails) in notes {
                 if  let id = noteDetails[DatabaseNodeCommonProperties.id] as? String,
                     let dateOfCreation = noteDetails[NoteNodeProperties.dateOfCreation] as? String,
+                    let dateObject = dateOfCreation.noteCreationDateFromString,
                     let noteText = noteDetails[NoteNodeProperties.text] as? String {
-                    let userNote = NoteModel(id: id, dateOfCreation: Date(), text: noteText)
+                    let userNote = NoteModel(id: id, dateOfCreation: dateObject, text: noteText)
                     userNotes.append(userNote)
                 }
             }

@@ -35,6 +35,9 @@
 		C16EA3222BAF67FC009D1BDA /* NoteWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16EA3212BAF67FC009D1BDA /* NoteWidgetView.swift */; };
 		C16EA3242BAF680B009D1BDA /* NoteDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16EA3232BAF680B009D1BDA /* NoteDetailsView.swift */; };
 		C16EA32D2BAFDB58009D1BDA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C16EA32C2BAFDB58009D1BDA /* Colors.xcassets */; };
+		C16EA32F2BAFDC75009D1BDA /* Date + Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16EA32E2BAFDC75009D1BDA /* Date + Formatting.swift */; };
+		C16EA3312BAFDCE2009D1BDA /* String + Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16EA3302BAFDCE2009D1BDA /* String + Date.swift */; };
+		C16EA3332BAFE96B009D1BDA /* SearchWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16EA3322BAFE96B009D1BDA /* SearchWidgetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +68,9 @@
 		C16EA3232BAF680B009D1BDA /* NoteDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailsView.swift; sourceTree = "<group>"; };
 		C16EA3292BAFC524009D1BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C16EA32C2BAFDB58009D1BDA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		C16EA32E2BAFDC75009D1BDA /* Date + Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Formatting.swift"; sourceTree = "<group>"; };
+		C16EA3302BAFDCE2009D1BDA /* String + Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Date.swift"; sourceTree = "<group>"; };
+		C16EA3322BAFE96B009D1BDA /* SearchWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWidgetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +204,7 @@
 			children = (
 				C16EA3172BAEEFF6009D1BDA /* ActivityIndicator.swift */,
 				C16EA3192BAEF017009D1BDA /* OverlayContainerView.swift */,
+				C16EA3322BAFE96B009D1BDA /* SearchWidgetView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -214,6 +221,8 @@
 			isa = PBXGroup;
 			children = (
 				C16EA31F2BAF52DA009D1BDA /* UIDevice + UUID.swift */,
+				C16EA32E2BAFDC75009D1BDA /* Date + Formatting.swift */,
+				C16EA3302BAFDCE2009D1BDA /* String + Date.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -300,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C16EA3332BAFE96B009D1BDA /* SearchWidgetView.swift in Sources */,
 				C16EA3222BAF67FC009D1BDA /* NoteWidgetView.swift in Sources */,
 				C16EA3112BAEECBE009D1BDA /* TypeAliases.swift in Sources */,
 				C16EA3182BAEEFF6009D1BDA /* ActivityIndicator.swift in Sources */,
@@ -307,9 +317,11 @@
 				C16EA3152BAEEF82009D1BDA /* OverlayContainerContext.swift in Sources */,
 				C16EA3052BAEE891009D1BDA /* AddNewNoteView.swift in Sources */,
 				C16EA31A2BAEF017009D1BDA /* OverlayContainerView.swift in Sources */,
+				C16EA3312BAFDCE2009D1BDA /* String + Date.swift in Sources */,
 				C16EA2FF2BAEE59F009D1BDA /* AppDelegate.swift in Sources */,
 				C16EA2AD2BAEDBA3009D1BDA /* HomeView.swift in Sources */,
 				C16EA3132BAEED19009D1BDA /* FirebaseDatabaseService.swift in Sources */,
+				C16EA32F2BAFDC75009D1BDA /* Date + Formatting.swift in Sources */,
 				C16EA3092BAEE8BE009D1BDA /* HomeViewModel.swift in Sources */,
 				C16EA3012BAEE863009D1BDA /* EmptyNotesView.swift in Sources */,
 				C16EA3072BAEE8A4009D1BDA /* SearchNotesView.swift in Sources */,

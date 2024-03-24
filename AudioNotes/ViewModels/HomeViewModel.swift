@@ -34,8 +34,27 @@ class HomeViewModel: ObservableObject {
             }
             
             self.userNotes.removeAll()
+            //let sorteddNotesByCreationDate = notes.sorted(by: { $0.dateOfCreation.timeIntervalSince1970 > $1.dateOfCreation.timeIntervalSince1970 })
             self.userNotes.append(contentsOf: notes)
+            self.sortNotesByCreationDate()
             responseHandler(true)
         }
+    }
+    
+    /**
+     Add the given note object to the list of existing notes and then sort by note creation date and time
+     */
+    func addNewNote(note: NoteModel) {
+        self.userNotes.append(note)
+        self.sortNotesByCreationDate()
+    }
+    
+    // MARK: - Private Methods
+    
+    /**
+     Sorts notes based on their creation date and time
+     */
+    private func sortNotesByCreationDate() {
+        self.userNotes.sort(by: { $0.dateOfCreation.timeIntervalSince1970 > $1.dateOfCreation.timeIntervalSince1970 })
     }
 }

@@ -26,7 +26,7 @@ struct NoteWidgetView: View {
             
             HStack(alignment: .center, spacing: 24) {
                 VStack(alignment: .leading, spacing: 8) {
-                    Text("\(self.note.dateOfCreation.description)")
+                    Text("\(self.note.dateOfCreation.formattedDateAndTimeString)")
                         .font(.system(size: 12))
                         .foregroundColor(Color.black)
                     

@@ -70,6 +70,6 @@ extension HomeView: EmptyNotesViewDelegate {
 extension HomeView: AddNewNoteViewDelegate {
     func didSaveNewNote(_ note: NoteModel) {
         self.shouldShowAddNewNoteView = false
-        self.viewModel.userNotes.append(note)
+        self.viewModel.addNewNote(note: note)
     }
 }
