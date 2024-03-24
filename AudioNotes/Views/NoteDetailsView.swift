@@ -49,6 +49,12 @@ struct NoteDetailsView: View {
                     
                     Spacer()
                 }
+                .overlay(content: {
+                    Text(NSLocalizedString("Note Details", comment: "Note details view - title"))
+                        .font(.system(size: 18))
+                        .foregroundColor(Color.black)
+                        .padding(.horizontal, 24)
+                })
                 .padding(.horizontal, 12)
                 
                 // Notes details

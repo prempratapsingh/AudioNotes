@@ -34,6 +34,7 @@
 		C16EA3202BAF52DA009D1BDA /* UIDevice + UUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16EA31F2BAF52DA009D1BDA /* UIDevice + UUID.swift */; };
 		C16EA3222BAF67FC009D1BDA /* NoteWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16EA3212BAF67FC009D1BDA /* NoteWidgetView.swift */; };
 		C16EA3242BAF680B009D1BDA /* NoteDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16EA3232BAF680B009D1BDA /* NoteDetailsView.swift */; };
+		C16EA32D2BAFDB58009D1BDA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C16EA32C2BAFDB58009D1BDA /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		C16EA3212BAF67FC009D1BDA /* NoteWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteWidgetView.swift; sourceTree = "<group>"; };
 		C16EA3232BAF680B009D1BDA /* NoteDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailsView.swift; sourceTree = "<group>"; };
 		C16EA3292BAFC524009D1BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C16EA32C2BAFDB58009D1BDA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,8 +152,9 @@
 		C16EA2BA2BAEDBCC009D1BDA /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				C16EA2BD2BAEDC34009D1BDA /* Assets.xcassets */,
 				C16EA2BB2BAEDC19009D1BDA /* SplashScreen.storyboard */,
+				C16EA2BD2BAEDC34009D1BDA /* Assets.xcassets */,
+				C16EA32C2BAFDB58009D1BDA /* Colors.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				C16EA31D2BAEF409009D1BDA /* Localizable.strings in Resources */,
 				C16EA2B22BAEDBA4009D1BDA /* Preview Assets.xcassets in Resources */,
 				C16EA2C62BAEE461009D1BDA /* GoogleService-Info.plist in Resources */,
+				C16EA32D2BAFDB58009D1BDA /* Colors.xcassets in Resources */,
 				C16EA2BC2BAEDC19009D1BDA /* SplashScreen.storyboard in Resources */,
 				C16EA2BE2BAEDC34009D1BDA /* Assets.xcassets in Resources */,
 			);

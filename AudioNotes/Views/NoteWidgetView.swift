@@ -21,7 +21,7 @@ struct NoteWidgetView: View {
     var body: some View {
         ZStack(alignment: .leading) {
             RoundedRectangle(cornerRadius: 8)
-                .fill(Color.gray)
+                .fill(Color.gray200)
                 .frame(height: 80)
             
             HStack(alignment: .center, spacing: 24) {
@@ -32,8 +32,12 @@ struct NoteWidgetView: View {
                     
                     Text("\(self.note.text)")
                         .font(.system(size: 16))
+                        .truncationMode(.tail)
                         .foregroundColor(Color.black)
+                        .frame(height: 40)
+                        
                 }
+                
                 
                 Spacer()
                 

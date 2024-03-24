@@ -33,7 +33,7 @@ struct EmptyNotesView: View {
             
             Text(
                 NSLocalizedString(
-                    "Audio notes app simplifies the workflow for taking notes and working with them later.\n\nTap on the take new note button to start.",
+                    "Audio notes app simplifies the workflow for taking notes.\n\nTap on the add new note button to start.",
                     comment: "Empty notes view - description"
                 )
             )

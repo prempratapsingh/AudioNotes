@@ -65,8 +65,15 @@ struct AddNewNoteView: View {
                     
                     Spacer()
                 }
+                .overlay(content: {
+                    Text(NSLocalizedString("Add New Note", comment: "Add new note view - title"))
+                        .font(.system(size: 18))
+                        .foregroundColor(Color.black)
+                        .padding(.horizontal, 24)
+                })
                 .padding(.horizontal, 12)
                 .padding(.bottom, self.viewModel.noteText == nil ? 80 : 10)
+                
                 
                 // Record audio button
                 if self.viewModel.noteText == nil {

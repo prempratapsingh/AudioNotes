@@ -7,7 +7,7 @@
 */
 
 //----- Empty Notes View -----//
-"Audio notes app simplifies the workflow for taking notes and working with them later.\n\nTap on the take new note button to start." = "Audio notes app simplifies the workflow for taking notes and working with them later.\n\nTap on the take new note button to start.";
+"Audio notes app simplifies the workflow for taking notes.\n\nTap on the add new note button to start." = "Audio notes app simplifies the workflow for taking notes.\n\nTap on the add new note button to start.";
 "Add a note" = "Add a note";
 
 
@@ -22,6 +22,9 @@
 "Convert audio note to text" = "Convert audio note to text";
 "Great, here is your text note," = "Great, here is your text note,";
 "Save note" = "Save note";
+
+//----- Note Details View -----//
+"Note Details" = "Note Details";
 
 //----- Search Note View -----//
 "Search Notes" = "Search Notes";
