@@ -62,6 +62,7 @@
 		C16EA31F2BAF52DA009D1BDA /* UIDevice + UUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice + UUID.swift"; sourceTree = "<group>"; };
 		C16EA3212BAF67FC009D1BDA /* NoteWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteWidgetView.swift; sourceTree = "<group>"; };
 		C16EA3232BAF680B009D1BDA /* NoteDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailsView.swift; sourceTree = "<group>"; };
+		C16EA3292BAFC524009D1BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +98,7 @@
 		C16EA2A92BAEDBA3009D1BDA /* AudioNotes */ = {
 			isa = PBXGroup;
 			children = (
+				C16EA3292BAFC524009D1BDA /* Info.plist */,
 				C16EA31E2BAF52C8009D1BDA /* Extension */,
 				C16EA2C42BAEE44E009D1BDA /* Firebase */,
 				C16EA2B82BAEDBB9009D1BDA /* Application */,
@@ -449,8 +451,10 @@
 				DEVELOPMENT_TEAM = E7LF2VLC52;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AudioNotes/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Audio Notes";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Speech Audio app needs access to Speech framework to convert your audio notes to text.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -484,8 +488,10 @@
 				DEVELOPMENT_TEAM = E7LF2VLC52;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AudioNotes/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Audio Notes";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Speech Audio app needs access to Speech framework to convert your audio notes to text.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -86,11 +86,18 @@ struct AddNewNoteView: View {
                 Button(
                     action: {
                         self.overlayContainerContext.shouldShowProgressIndicator = true
-                        self.viewModel.saveNoteToDatabase { note in
+                        self.viewModel.convertAudioToText { text in
                             self.overlayContainerContext.shouldShowProgressIndicator = false
-                            guard let userNote = note else { return }
-                            self.delegate?.didSaveNewNote(userNote)
+                            guard let noteText = text else { return }
+                            print(noteText)
                         }
+                        
+//                        self.overlayContainerContext.shouldShowProgressIndicator = true
+//                        self.viewModel.saveNoteToDatabase { note in
+//                            self.overlayContainerContext.shouldShowProgressIndicator = false
+//                            guard let userNote = note else { return }
+//                            self.delegate?.didSaveNewNote(userNote)
+//                        }
                     },
                     label: {
                         ZStack {
